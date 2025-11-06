@@ -2,19 +2,28 @@ import { Link, useLocation } from "react-router-dom";
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const location = useLocation();
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
+  const [theme, setTheme] = useState<"light" | "dark">(() => {
+    // Get theme from localStorage or default to dark
+    return (localStorage.getItem("theme") as "light" | "dark") || "dark";
+  });
 
   useEffect(() => {
-    // Set initial theme to dark
-    document.documentElement.classList.add("dark");
+    // Apply theme on mount
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
   }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
     document.documentElement.classList.toggle("dark");
   };
 
@@ -34,8 +43,8 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 rounded-lg bg-gradient-accent flex items-center justify-center transition-smooth group-hover:shadow-glow">
-              <span className="text-xl font-bold text-white">H</span>
+            <div className="w-10 h-10 flex items-center justify-center transition-smooth">
+              <img src={logo} alt="Hestios Logo" className="w-full h-full object-contain" />
             </div>
             <span className="text-2xl font-bold text-foreground">HESTIOS</span>
           </Link>
@@ -67,7 +76,7 @@ const Navigation = () => {
             onClick={toggleTheme}
             className="transition-smooth hover:bg-accent/10"
           >
-            {theme === "dark" ? (
+            {theme === "light" ? (
               <Sun className="h-5 w-5 text-accent" />
             ) : (
               <Moon className="h-5 w-5 text-accent" />

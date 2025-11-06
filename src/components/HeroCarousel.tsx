@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroMain from "@/assets/hero-main.png";
+import heroIvayami from "@/assets/hero-ivayami.png";
+import heroJourney from "@/assets/hero-journey.png";
 
 interface Slide {
   title: string;
@@ -14,18 +16,18 @@ const slides: Slide[] = [
   {
     title: "Crafting Immersive Worlds",
     description: "Where creativity meets innovation in game development",
-    image: heroBg,
+    image: heroMain,
   },
   {
     title: "Ivayami",
     description: "Our debut title - A journey into mystery and discovery",
-    image: heroBg,
-    link: "/games",
+    image: heroIvayami,
+    link: "/games/ivayami",
   },
   {
     title: "Join Our Journey",
     description: "We're building something special. Be part of it.",
-    image: heroBg,
+    image: heroJourney,
     link: "/careers",
   },
 ];
@@ -92,9 +94,16 @@ const HeroCarousel = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <button
+        onClick={() => {
+          const whatWeDoSection = document.getElementById('what-we-do');
+          whatWeDoSection?.scrollIntoView({ behavior: 'smooth' });
+        }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer"
+        aria-label="Scroll to What We Do section"
+      >
         <ChevronDown className="w-8 h-8 text-accent" />
-      </div>
+      </button>
     </section>
   );
 };

@@ -31,7 +31,7 @@ const Index = () => {
         <HeroCarousel />
 
         {/* Features Section */}
-        <section className="container mx-auto px-6 py-20">
+        <section id="what-we-do" className="container mx-auto px-6 py-20">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-gradient mb-4">What We Do</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -68,7 +68,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/services"
-                className="px-8 py-3 bg-gradient-accent text-accent-foreground rounded-lg font-semibold hover:shadow-glow transition-smooth"
+                className="px-8 py-3 bg-card text-foreground border border-border rounded-lg font-semibold hover:border-accent transition-smooth"
               >
                 Our Services
               </a>
