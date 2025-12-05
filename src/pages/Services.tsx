@@ -70,7 +70,7 @@ const Services = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-16 h-16 rounded-lg bg-gradient-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-smooth">
-                  <service.icon className="w-8 h-8 text-accent-foreground" />
+                  <service.icon className="w-8 h-8 text-foreground" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-foreground">{service.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{service.description}</p>
@@ -96,7 +96,7 @@ const Services = () => {
               { step: "04", title: "Delivery", desc: "Launch and ongoing support" },
             ].map((phase, index) => (
               <div key={index} className="text-center animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="w-16 h-16 rounded-full bg-gradient-accent text-accent-foreground text-2xl font-bold flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 rounded-full bg-gradient-accent text-foreground text-2xl font-bold flex items-center justify-center mx-auto mb-4">
                   {phase.step}
                 </div>
                 <h4 className="text-xl font-bold text-foreground mb-2">{phase.title}</h4>

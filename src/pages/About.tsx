@@ -2,6 +2,9 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Target, Eye, Heart } from "lucide-react";
+import creativeDirector from "@/assets/creative-director.png";
+import technicalLead from "@/assets/technical-lead.png";
+import artDirector from "@/assets/art-director.png";
 
 const About = () => {
   const values = [
@@ -27,16 +30,19 @@ const About = () => {
       name: "Creative Director",
       role: "Vision & Design",
       description: "Leading the creative direction and ensuring every project stays true to our artistic vision.",
+      image: creativeDirector,
     },
     {
       name: "Technical Lead",
       role: "Engineering & Systems",
       description: "Building robust systems and optimizing performance to deliver smooth, engaging gameplay.",
+      image: technicalLead,
     },
     {
       name: "Art Director",
       role: "Visual Identity",
       description: "Crafting unique visual styles that bring our game worlds to life with memorable aesthetics.",
+      image: artDirector,
     },
   ];
 
@@ -68,7 +74,7 @@ const About = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-16 h-16 rounded-lg bg-gradient-accent flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-smooth">
-                  <value.icon className="w-8 h-8 text-accent-foreground" />
+                  <value.icon className="w-8 h-8 text-foreground" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-foreground">{value.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{value.description}</p>
@@ -119,10 +125,12 @@ const About = () => {
                 className="p-8 bg-card border-border hover:border-accent transition-smooth shadow-card hover:shadow-glow text-center animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-24 h-24 rounded-full bg-gradient-accent mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-3xl font-bold text-accent-foreground">
-                    {member.name.charAt(0)}
-                  </span>
+                <div className="w-24 h-24 rounded-full mx-auto mb-6 overflow-hidden border-2 border-accent">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-2">{member.name}</h3>
                 <p className="text-accent font-medium mb-4">{member.role}</p>
@@ -143,7 +151,7 @@ const About = () => {
             </p>
             <a
               href="/careers"
-              className="inline-block px-8 py-3 bg-gradient-accent text-accent-foreground rounded-lg font-semibold hover:shadow-glow transition-smooth"
+              className="inline-block px-8 py-3 bg-gradient-accent text-foreground rounded-lg font-semibold hover:shadow-glow transition-smooth"
             >
               View Open Positions
             </a>
