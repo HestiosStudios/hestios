@@ -46,8 +46,8 @@ const Index = () => {
                 className="p-8 bg-card border-border hover:border-accent transition-smooth shadow-card hover:shadow-glow group animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-16 h-16 rounded-lg bg-gradient-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-smooth">
-                  <feature.icon className="w-8 h-8 text-accent-foreground" />
+              <div className="w-16 h-16 rounded-lg bg-gradient-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-smooth">
+                  <feature.icon className="w-8 h-8 text-foreground" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-foreground">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.description}</p>

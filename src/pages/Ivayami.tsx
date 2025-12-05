@@ -12,33 +12,24 @@ const Ivayami = () => {
   ];
 
   const ctaButtons = (
-    <>
-      <Button
-        asChild
-        size="lg"
-        className="w-full bg-gradient-accent text-accent-foreground hover:shadow-glow transition-smooth"
+    <Button
+      asChild
+      size="lg"
+      className="w-full bg-gradient-accent text-foreground hover:opacity-90 transition-smooth"
+    >
+      <a
+        href="https://store.steampowered.com/app/3337980"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center gap-2"
       >
-        <a
-          href="https://store.steampowered.com/app/3337980"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2"
-        >
-          <span>Wishlist on Steam</span>
-          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.48 2 12c0 5.52 4.48 10 10 10s10-4.48 10-10c0-5.52-4.48-10-10-10zm0 18c-4.41 0-8-3.59-8-8 0-.69.09-1.36.26-2l4.46 1.85c.14-.19.3-.36.48-.51l-.01-4.78c.49-.11 1-.17 1.51-.17 4.41 0 8 3.59 8 8s-3.59 8-8 8zm-5.44-9.39l3.09 1.28c.09-.43.29-.82.57-1.13l.01-3.32C8.61 8.04 7.56 9.57 6.56 11.61zm9.11-3.28c-1.19 0-2.15.96-2.15 2.15 0 1.19.96 2.15 2.15 2.15 1.19 0 2.15-.96 2.15-2.15 0-1.19-.96-2.15-2.15-2.15z"/>
-          </svg>
-        </a>
-      </Button>
-      <Button
-        asChild
-        size="lg"
-        variant="outline"
-        className="w-full border-border hover:border-accent transition-smooth"
-      >
-        <a href="/games">Back to Games</a>
-      </Button>
-    </>
+        <span>Wishlist on Steam</span>
+        <svg className="w-5 h-5" viewBox="0 0 256 259" fill="currentColor">
+          <path d="M127.779 0C60.21 0 5.2 52.105.492 118.479l68.67 28.36c5.833-3.996 12.873-6.343 20.476-6.343 1.368 0 2.716.071 4.04.203l30.627-44.384v-.622c0-27.774 22.596-50.371 50.37-50.371 27.774 0 50.371 22.597 50.371 50.37 0 27.775-22.597 50.372-50.37 50.372h-1.168l-43.676 31.161c.088 1.103.137 2.217.137 3.343 0 20.845-16.926 37.77-37.77 37.77-18.243 0-33.444-12.95-36.944-30.158L3.212 164.78C18.827 218.248 68.092 258.068 127.779 258.068c70.721 0 128.067-57.345 128.067-128.068C255.846 57.345 198.501 0 127.779 0z"/>
+          <path d="M80.907 208.107l-15.504-6.408c2.735 5.71 7.304 10.568 13.232 13.652 12.845 6.683 28.675 1.666 35.359-11.178 3.24-6.226 3.617-13.12 1.064-19.41-2.554-6.292-7.468-11.07-13.845-14.378-6.29-3.27-12.986-3.735-19.107-1.89l16.016 6.625c9.476 4.931 13.148 16.498 8.214 25.873-4.936 9.373-16.503 13.048-25.874 8.117l.445-.003zm123.87-112.415c0-18.513-15.057-33.571-33.571-33.571-18.513 0-33.57 15.058-33.57 33.57 0 18.514 15.057 33.572 33.57 33.572 18.514 0 33.57-15.058 33.57-33.571zm-58.912-.02c0-13.969 11.36-25.33 25.33-25.33s25.33 11.361 25.33 25.33c0 13.97-11.36 25.33-25.33 25.33s-25.33-11.36-25.33-25.33z"/>
+        </svg>
+      </a>
+    </Button>
   );
 
   const content = (

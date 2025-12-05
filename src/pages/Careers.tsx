@@ -82,7 +82,7 @@ const Careers = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-16 h-16 rounded-lg bg-gradient-accent flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-smooth">
-                  <benefit.icon className="w-8 h-8 text-accent-foreground" />
+                  <benefit.icon className="w-8 h-8 text-foreground" />
                 </div>
                 <h3 className="text-lg font-bold mb-2 text-foreground">{benefit.title}</h3>
                 <p className="text-sm text-muted-foreground">{benefit.description}</p>
@@ -135,7 +135,7 @@ const Careers = () => {
               { step: "04", title: "Offer", desc: "Welcome to the team!" },
             ].map((phase, index) => (
               <div key={index} className="text-center animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="w-16 h-16 rounded-full bg-gradient-accent text-accent-foreground text-2xl font-bold flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 rounded-full bg-gradient-accent text-foreground text-2xl font-bold flex items-center justify-center mx-auto mb-4">
                   {phase.step}
                 </div>
                 <h4 className="text-xl font-bold text-foreground mb-2">{phase.title}</h4>
@@ -187,7 +187,7 @@ const Careers = () => {
               </p>
               <Button
                 size="lg"
-                className="bg-gradient-accent text-accent-foreground hover:shadow-glow transition-smooth"
+                className="bg-gradient-accent text-foreground hover:shadow-glow transition-smooth"
               >
                 Follow Our Updates
               </Button>

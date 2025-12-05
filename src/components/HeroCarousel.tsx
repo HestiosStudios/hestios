@@ -71,7 +71,7 @@ const HeroCarousel = () => {
             <Button
               asChild
               size="lg"
-              className="bg-gradient-accent text-accent-foreground hover:shadow-glow transition-smooth"
+              className="bg-gradient-accent text-foreground hover:opacity-90 transition-smooth"
             >
               <a href={slide.link}>Learn More</a>
             </Button>
